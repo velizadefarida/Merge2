@@ -1,5 +1,5 @@
 template<class T>
-T* merge(const T* a, size_t sa, const T* b, size_t sb, T* c)
+size_t merge(const T* a, size_t sa, const T* b, size_t sb, T* c)
 {
     T* cur = c;
     size_t i = 0, j = 0;
@@ -29,5 +29,5 @@ T* merge(const T* a, size_t sa, const T* b, size_t sb, T* c)
         ++j;
         ++cur;
     }
-    return cur;
+    return static_cast<size_t>(cur - c);
 }
